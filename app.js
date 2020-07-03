@@ -8,7 +8,7 @@ const morgan = require('morgan');
 
 const app = express();
 
-const port = process.env.PORT || process.env.DEVELOPMENT ? 3000 : 80;
+const port = process.env.PORT || 80;
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
