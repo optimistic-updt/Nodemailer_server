@@ -8,7 +8,7 @@ const morgan = require('morgan');
 
 const app = express();
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || process.env.DEVELOPMENT ? 3000 : 80;
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
@@ -34,7 +34,18 @@ app.get("/", (req, res) => {
   res.send("Welcome the email api")
 })
 
+app.get("/checkcred", (req, res) => {
 
+  let checkCred = {
+    email: false,
+    pass: false
+  }
+
+  checkCred.email = process.env.EMAIL ? true : false
+  checkCred.pass = process.env.PASS ? true : false
+
+  res.json(checkCred)
+})
 
 
 
