@@ -32,8 +32,8 @@ sendToMeRouter.post('/', (req, res, next) => {
   let data = req.body;
   
   let mail = {
-    from: 'kevgarciamusic@ghotmail.com', // this doesnt appear anywhere TODO change that later to knew adress
-    to: 'kev4tech@gmail.com',
+    from: `${ data.email }`, // this doesnt appear anywhere TODO change that later to knew adress
+    to: 'kevwebsite@gmail.com',
     subject: `!!website from ${ data.name }`,
     html: `<p>${data.name}</p>
             <p>${data.email}</p>
