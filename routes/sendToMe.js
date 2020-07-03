@@ -6,7 +6,6 @@ dotenv.config();
 
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
 
 // console.log("from sent to me");
 
