@@ -42,8 +42,10 @@ sendToMeRouter.post('/', (req, res, next) => {
 
   smtpTransporter.sendMail(mail, (error, response)=>{
     if (error) {
+      console.log('NODEMAILER', 'The email did not sent')
       res.send(error)
     } else {
+      console.log('NODEMAILER', 'sucess on sending the email')
       res.send('success')
     }
     smtpTransporter.close();
