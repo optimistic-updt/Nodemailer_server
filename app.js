@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 var corsOptions = {
-  origin: 'https://deploy-test.d2exwe1par8tum.amplifyapp.com',
+  origin: 'https://kevgarcia.me',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
