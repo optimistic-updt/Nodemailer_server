@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 var corsOptions = {
-  origin: 'https://www.kevgarcia.me',
+  origin: 'https://www.kevgarcia.fyi',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
