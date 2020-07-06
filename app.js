@@ -14,28 +14,27 @@ app.use(morgan('dev'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// var corsOptions = {
-//   origin: 'http://kevgarcia.me',
-//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// }
-
-app.use(cors())
 
 
+
+
+
+var corsOptions = {
+  origin: 'https://deploy-test.d2exwe1par8tum.amplifyapp.com',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 
 // ROUTES
-app.use('/sendtome', require('./routes/sendToMe'))
-
-
+app.use('/sendtome', cors(corsOptions), require('./routes/sendToMe'))
 
 
 app.get("/", (req, res) => {
   res.send("Welcome the email api")
 })
 
-app.get("/checkcred", (req, res) => {
 
+app.get("/checkcred", (req, res) => {
   let checkCred = {
     email: false,
     pass: false

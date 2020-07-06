@@ -29,6 +29,7 @@ let smtpTransporter = nodemailer.createTransport(transport)
 // the posting route
 sendToMeRouter.post('/', (req, res, next) => {
   let data = req.body;
+  console.log(data.name);
   
   let mail = {
     from: `${ data.email }`, // this doesnt appear anywhere TODO change that later to knew adress
