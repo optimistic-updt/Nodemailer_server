@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+
+
 const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -13,9 +15,6 @@ const port = process.env.PORT || 80;
 app.use(morgan('dev'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
-
 
 
 
